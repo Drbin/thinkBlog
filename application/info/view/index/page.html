@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="/rjkf/public/css/bootstrap.css" rel="stylesheet">
+    <link href="/rjkf/public/css/style.css" rel="stylesheet">
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+</head>
+<body>
+<include file="public/header.html" />
+<div class="container">
+    <volist id="info" name="info">
+        <a href="{$flag==1?'/rjkf/web':'/rjkf/random'}/{$info.news_id}">
+            <div class="">
+                <div class="pic">
+                    <img src="{$info.news_url==''?'/rjkf/public/img/default.png':$info.news_url}" width="120" height="60" >
+                </div>
+                <div class="">{$info.news_name}</div>
+                <div class="desc">{$info.news_name}</div>
+                <div class="time">{$info.news_create}</div>
+            </div>
+        </a>
+    </volist>
+</div>
+
+</body>
+</html>

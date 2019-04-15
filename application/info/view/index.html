@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<header>
+    hello world
+</header>
+<script id="tpl" type="text/html">
+    <% var msg=data.data %>
+    <div class="clock-title"><%=msg.clockTitle%></div>
+    <div class="clock-subtitle"><%=msg.clockOrtherTitle%></div>
+    <div class="clock-con">
+        <a href="<%=data.url  %>" >
+            <% var list=data.data.clockInfoVOList%>
+            <% for(var i=0; i< list.length; i++) { %>
+            <% var item = list[i]; %>
+            <div class="clock-item">
+                <% if(item.fileType==2){%>
+                <img src="http://www.vlearnjy.com/<%=item.infoFile%>" alt="" />
+                <%}else if(item.fileType==1){%>
+                <video id="my-video<%=i%>" class="video-js vjs-big-play-centered" width="100%" playsinline controls preload="auto" poster="http://www.vlearnjy.com/<%=item.videoCover%>">
+                    <source src="http://www.vlearnjy.com/<%=item.infoFile%>" type="video/mp4">
+
+                    <p class="vjs-no-js">To view this video please enable JavaScript, and consider upgrading to a web browser that
+                        <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
+                    </p>
+                </video>
+                <%}%>
+                <div class="txt">
+                    <%=item.infoContent%>
+                </div>
+
+            </div>
+            <%}%>
+        </a>
+    </div>
+</script>
+<script>
+
+</script>
+</body>
+</html>
