@@ -7,4 +7,27 @@
 <body>
 找不到页面
 </body>
+<script>
+    /**
+     *
+     * @param year  年
+     * @param month 月
+     * @param day 日
+     *
+     */
+    function setBefore(year,month,day) {
+        var nDay=new Date((Number(year)+1)+'/'+month+'/'+day);
+        var yesterdays=nDay.getTime()-86400000;
+        var yesterday=new Date();
+        yesterday.setTime(yesterdays);
+        var strYear=yesterday.getFullYear();
+        var strDay=yesterday.getDate();
+        var strMonth=yesterday.getMonth()+1;
+        strMonth=strMonth>9?strMonth:"0"+strMonth;
+        strDay=strDay>9?strDay:"0"+strDay;
+        return strYear+"-"+strMonth+"-"+strDay;
+    }
+    alert(setBefore(2011,3,1))
+
+</script>
 </html>

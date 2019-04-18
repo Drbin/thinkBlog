@@ -35,7 +35,7 @@ class Text extends Controller
             if($file){
                 $info = $file->move(ROOT_PATH . 'public' . DS . 'upload');
                 if($info){
-                    $fileUrl= '/rjkf/public/upload/'.$info->getSaveName();
+                    $fileUrl= '/thinkBlog/public/upload/'.$info->getSaveName();
 
                 }else{
                     // 上传失败获取错误信息
@@ -77,7 +77,7 @@ class Text extends Controller
             if($file){
                 $info = $file->move(ROOT_PATH . 'public' . DS . 'upload');
                 if($info){
-                    $fileUrl= '/rjkf/public/upload/'.$info->getSaveName();
+                    $fileUrl= '/thinkBlog/public/upload/'.$info->getSaveName();
 
                 }else{
                     // 上传失败获取错误信息
@@ -108,7 +108,7 @@ class Text extends Controller
     public function del()
     {
         $res=model("Type")->where("type_id","=",input("id"))->delete();
-        if($res==1){
+        if($res){
             $this->success("删除成功","admin/Text/index");
         }else{
             $this->error($res);

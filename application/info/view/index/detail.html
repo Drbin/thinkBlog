@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <title>{$editInfo.news_name}</title>
-    <link href="/rjkf/public/css/bootstrap.css" rel="stylesheet">
-    <link href="/rjkf/public/css/style.css" rel="stylesheet">
+    <link href="/thinkBlog/public/css/bootstrap.css" rel="stylesheet">
+    <link href="/thinkBlog/public/css/style.css" rel="stylesheet">
     <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
     <link rel="icon" href="images/favicon.ico" type="image/x-icon">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -12,12 +12,16 @@
 </head>
 <body>
 <include file="public/header.html" />
-<h1>
-    {$editInfo.news_name}
-</h1>
-<p><span>{$editInfo.news_create}</span></p>
-<div class="content">
-    {$editInfo.news_content}
+<div class="container">
+    <h1 class="detail_tit text-center">
+        {$editInfo.news_name}
+    </h1>
+
+    <div class="content">
+        {$editInfo.news_content}
+    </div>
+    <p class="time"><span>{$editInfo.news_create}</span></p>
 </div>
+
 </body>
 </html>

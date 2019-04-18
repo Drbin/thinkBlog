@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-    <link href="/rjkf/public/css/bootstrap.css" rel="stylesheet">
-    <link href="/rjkf/public/css/style.css" rel="stylesheet">
+    <link href="/thinkBlog/public/css/bootstrap.css" rel="stylesheet">
+    <link href="/thinkBlog/public/css/style.css" rel="stylesheet">
     <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
     <link rel="icon" href="images/favicon.ico" type="image/x-icon">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -12,20 +12,30 @@
 </head>
 <body>
 <include file="public/header.html" />
+<input value="{$flag}" id="flag" type="hidden">
 <div class="container">
     <volist id="info" name="info">
-        <a href="{$flag==1?'/rjkf/web':'/rjkf/random'}/{$info.news_id}">
-            <div class="">
-                <div class="pic">
-                    <img src="{$info.news_url==''?'/rjkf/public/img/default.png':$info.news_url}" width="120" height="60" >
-                </div>
-                <div class="">{$info.news_name}</div>
-                <div class="desc">{$info.news_name}</div>
-                <div class="time">{$info.news_create}</div>
+        <div class="col-lg-3 col-md-4 col-sm-12 news_item">
+            <div class="pic">
+                <img src="{$info.news_url==''?'/thinkBlog/public/img/default.png':$info.news_url}"  >
             </div>
-        </a>
+             <a href="{$flag==1?'/thinkBlog/web':'/thinkBlog/random'}/{$info.news_id}" class="article_title"> {$info.news_name} </a>
+            <div class="desc">{$info.news_name}</div>
+            <div>{$info.news_create}</div>
+        </div>
+
     </volist>
 </div>
-
+<script src="/thinkBlog/public/js/jquery.js"></script>
+<script>
+    $(".pic").height($(".pic").width()*0.6)
+    if ($("#flag").val()==1){
+        $(".nav_list li").removeClass("active");
+        $("#web").addClass("active");
+    }else{
+        $(".nav_list li").removeClass("active");
+        $("#random").addClass("active");
+    }
+</script>
 </body>
 </html>

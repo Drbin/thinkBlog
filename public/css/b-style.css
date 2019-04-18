@@ -13,7 +13,17 @@ hr{display:block;height:1px;border:0;border-top:1px solid #ccc;margin:1em 0;padd
 input,select{vertical-align:middle}
 li{list-style:none}
 img{border:none;}
-.container{ max-width: 1300px; margin: 0 auto;}
+.choose{ min-width: 200px; float: left;line-height: 24px; position: relative;box-sizing: border-box;padding-left:28px; }
+.choose input[type=checkbox],.choose input[type=radio]{position:absolute;top: 0; left: 0; z-index: 99; width:100%;cursor: pointer; height: 100%;margin:0;padding:0;opacity:0;filter:"alpha(opacity=0)"}
+.choose input[type=checkbox]+label{position:absolute;top: 0; left: 0;padding-left: 25px;  box-sizing: border-box; display:inline-block; width:200px;background:url(../img/checkbox.png) no-repeat 0 0;line-height:24px;height:24px;opacity:1}
+.choose input[type=checkbox]:hover+label{background:url(../img/checkbox.png) no-repeat 0 -51px}input[type=checkbox]:checked+label{background:url(../img/checkbox.png) no-repeat 0 -25px}
+.choose input[type=checkbox]:checked:hover+label{background:url(../img/checkbox.png) no-repeat 0 -81px}
+.choose input[type=radio]+label{display:inline-block;position:absolute;top: 0; left: 0; padding-left: 25px;width:200px;background:url(../img/radio.png) no-repeat 0 -2px;line-height:24px;height:24px;}
+.choose input[type=radio]:hover+label{background:url(../img/radio.png) no-repeat 0 -26px}
+.choose input[type=radio]:checked+label{background:url(../img/radio.png) no-repeat 0 -50px}
+.choose input[type=radio]:checked:hover+label{background:url(../img/radio.png) no-repeat 0 -78px}
+
+.container{ width: 1300px; margin: 0 auto;}
 header{ width: 100%; background: #fff; height: 70px; border-bottom: 1px solid #eee;}
 header .logo{ width: 50px; height:50px; display: inline-block; float: left; margin: 10px; }
 header .logo img{ width: 100%; height: 100%;}
@@ -25,7 +35,7 @@ header .nav_list li.active{background: #0d6fb8; }
 header .nav_list li.active a{ color: #fff; }
 .nav_myself{width: 200px; float: left;}
 .form_table{width: 1050px; float: right;}
-.form-group{line-height: 30px; float: left;}
+.form-group{line-height: 30px; float: left; width: 100%;}
 .detail_tit{height: 40px; font-size: 20px; color: #222; line-height: 30px; border-bottom: 1px solid #ddd; margin-top: 20px;}
 .content{border-bottom: 1px dotted #ddd; font-size: 16px; line-height: 26px; margin-bottom: 5px; color: #333333; padding:20px; box-sizing: border-box;}
 .time{width: 100%; height: 30px; line-height: 30px; padding: 0 20px; box-sizing: border-box;}

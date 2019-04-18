@@ -53,7 +53,7 @@ class Type extends Controller
             ];
             $result = model("Type")->edit($data,$id);
             if($result==1){
-                $this->success("添加成功","admin/Text/index");
+                $this->success("添加成功","admin/Type/index");
             }else{
                 $this->error($result);
             }
@@ -63,9 +63,9 @@ class Type extends Controller
     }
     public function del()
     {
-        $res=model("Text")->where("news_id","=",input("id"))->delete();
-        if($res==1){
-            $this->success("删除成功","admin/Text/index");
+        $res=model("Type")->where("type_id","=",input("id"))->delete();
+        if($res){
+            $this->success("删除成功","admin/Type/index");
         }else{
             $this->error($res);
         }
