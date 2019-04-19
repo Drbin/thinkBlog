@@ -1,5 +1,5 @@
 html,body,div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,abbr,address,cite,code,del,dfn,em,img,ins,kbd,q,samp,small,strong,sub,sup,var,b,i,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,figcaption,figure,footer,header,menu,nav,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent}
-body{line-height:1;font-size: 16px;color:#777;  font-family: "microsoft yahei"; }
+body{line-height:1;font-size: 16px;color:#777;  font-family: "microsoft yahei";background: #f1f1f1; }
 article,aside,details,figcaption,figure,footer,header,menu,nav,section{display:block}
 nav ul{list-style:none}
 blockquote,q{quotes:none}
@@ -50,6 +50,7 @@ width: 100%;
     -webkit-box-orient: vertical;
     overflow: hidden;
 }
+.title_flag{width: 100%; height: 30px; line-height: 30px; font-weight: 600; text-indent: 1em; font-size: 18px; margin-bottom: 10px; border-bottom: 1px dashed #ddd;}
 .types{ width: 100%; padding: 10px 0 10px 70px ; position: relative; line-height: 30px; border-bottom: 1px dotted #ddd;  }
 .types label{ width: 70px; display: inline-block; height: 30px; line-height: 30px; position: absolute; left:0; top:10px; text-align: center;font-size: 16px; }
 .types a{ height: 30px; padding: 0 16px; line-height: 30px; text-align: center; display: inline-block; margin-bottom: 10px;}
@@ -64,8 +65,11 @@ width: 100%;
 .index_news .index_pic img{ width: 100%; height: 100%;}
 .index_text{ width: 75%; height: 132px; float: left;}
 .index_text .text_overflow{margin: 0;}
+.file_src a{ width: 100%; height: 30px; text-indent: 1em; line-height: 30px; display: inline-block; font-size: 14px;border-bottom: 1px dotted #ccc; }
+.file_src a:hover{text-decoration: none;}
 @media screen and (max-width: 750px) {
     header{background: #f7f7f7;}
+    .file_src{display: none;}
     header .nav_list{display: none; width: 100%; cursor: pointer;}
     header .nav_list li{ margin: 0 0 10px 0; width: 100%; float: left; border: 1px solid #0d6fb8; }
     header .nav_list li a{ display: block;}

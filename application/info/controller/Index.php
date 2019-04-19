@@ -8,10 +8,8 @@ class Index extends Controller
 {
     public function index()
     {
-        $info= model("Text")->order(["news_type"],"desc")->paginate(10);
-        $page=$info->render();
+        $info= model("Text")->order("news_order","desc")->limit(10)->select();
         $this->assign("info",$info);
-        $this->assign("page",$page);
         return $this->fetch();
     }
     public function web()
