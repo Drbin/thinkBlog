@@ -57,6 +57,7 @@
                     <div class="form-group">
                         <label class="col-lg-2 text-right">所属类别：</label>
                         <div class="col-lg-3">
+                            <input name="news_order" type="hidden" value="{$order.news_order}" >
                             <select class="form-control">
                                 <option value="">请选择</option>
                                 <volist name="order" id="order">
@@ -80,10 +81,10 @@
                             <img id="img" src="/rjkf/public/img/default.png" style="width: 200px;float: left;height: 160px;" >
                         </div>
                     </div>
-                    <div class="form-group" style="height: 270px;">
+                    <div class="form-group" style="min-height: 270px;">
                         <label  class="col-lg-2 text-right">菜单备注：</label>
                         <div class="col-lg-10" style="line-height: 1; ">
-                            <textarea id="content" name="content" style="height: 250px;"></textarea>
+                            <textarea id="content" name="content" style="min-height: 250px;"></textarea>
                         </div>
                     </div>
                     <div class="form-group text-center" style="margin-top: 100px;">
@@ -107,6 +108,9 @@
 </script>
 <script src="/rjkf/public/js/jquery.js"></script>
 <script>
+    $("#type").change(function () {
+        $("input[name=news_order]").val($(this).find("option:selected").attr("data-title"))
+    })
     $('#file').on('change', function() {
         var files = this.files,
             videoURL = null,

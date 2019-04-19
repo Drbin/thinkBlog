@@ -10,8 +10,8 @@ namespace app\info\model;
 use think\Model;
 
 
-class Text extends Model
+class Type extends Model
 {
-    protected $table= 'news_tbl';
+    protected $table= 'type_tbl';
 
 }

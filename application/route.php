@@ -14,8 +14,11 @@ Route::rule(
         '/'=>'info/Index/index',
         'web'=>'info/Index/web',
         'web/:id'=>'info/Index/web',
+        'web/:name/:type'=>'info/Index/web',
+
         'random'=>'info/Index/random',
         'random/:id'=>'info/Index/random',
+        'random/:name/:type'=>'info/Index/random',
         'about'=>'info/Index/about',
     ]
 );

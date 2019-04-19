@@ -4,10 +4,20 @@
             <img src="/thinkBlog/public/img/logo.png">
         </a>
         <ul class="nav_list">
-            <li id="index" class="active"><a href="/thinkBlog/">首页</a></li>
+            <li id="index"><a href="/thinkBlog/">首页</a></li>
             <li id="web"><a href="/thinkBlog/web">web技术</a></li>
             <li id="random"><a href="/thinkBlog/random">随写</a></li>
             <li id="about"><a href="/thinkBlog/about">关于</a></li>
         </ul>
+        <div class="nav_click" >
+            <i class="fa fa-navicon"></i>
+        </div>
     </div>
 </header>
+<script src="/thinkBlog/public/js/jquery.js"></script>
+
+<script>
+    $(".nav_click").click(function () {
+        $(".nav_list").slideDown()
+    })
+</script>

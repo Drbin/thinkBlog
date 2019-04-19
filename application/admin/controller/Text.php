@@ -44,6 +44,7 @@ class Text extends Controller
             }
 
             $data=[
+                'news_order'=>input("post.news_order"),
                 'news_name'=>input("post.name"),
                 'news_keywords'=>input("post.keywords"),
                 'news_type'=>input("post.type"),
@@ -85,6 +86,7 @@ class Text extends Controller
                 }
             }
             $data=[
+                'news_order'=>input("post.news_order"),
                 'news_name'=>input("post.name"),
                 'news_keywords'=>input("post.keywords"),
                 'news_type'=>input("post.order"),

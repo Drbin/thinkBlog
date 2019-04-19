@@ -1,5 +1,5 @@
 html,body,div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,abbr,address,cite,code,del,dfn,em,img,ins,kbd,q,samp,small,strong,sub,sup,var,b,i,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,figcaption,figure,footer,header,menu,nav,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent}
-body{line-height:1;font-size: 16px;color:#777; background:#fff; font-family: "microsoft yahei"; }
+body{line-height:1;font-size: 16px;color:#777;  font-family: "microsoft yahei"; }
 article,aside,details,figcaption,figure,footer,header,menu,nav,section{display:block}
 nav ul{list-style:none}
 blockquote,q{quotes:none}
@@ -13,22 +13,58 @@ hr{display:block;height:1px;border:0;border-top:1px solid #ccc;margin:1em 0;padd
 input,select{vertical-align:middle}
 li{list-style:none}
 img{border:none;}
-.container{ max-width: 1300px; margin: 0 auto;}
-header{ width: 100%; background: #fff; height: 70px; border-bottom: 1px solid #eee;}
+.container{ max-width: 1300px; margin: 0 auto;position: relative;}
+header{ width: 100%; background: #fff; border-bottom: 1px solid #eee; }
 header .logo{ width: 50px; height:50px; display: inline-block; float: left; margin: 10px; }
 header .logo img{ width: 100%; height: 100%;}
-header .nav_list{ height:50px; margin-top:10px; float: right; }
+header .nav_list{  margin-top:10px; float: right; }
 header .nav_list li{ width: 80px; height: 30px; margin:10px 20px; float: left; line-height: 30px; text-align: center; }
 header .nav_list li a:hover{text-decoration: none;}
 header .nav_list li a{display:inline-block; line-height: 30px; text-align: center; }
 header .nav_list li.active{background: #0d6fb8; }
 header .nav_list li.active a{ color: #fff; }
+
+.nav_click{ width: 40px; font-size: 28px;line-height: 40px; text-align: center;  height: 40px; display: none; position:absolute;right: 25px; top:15px; background: #0d6fb8; color: #fff; border-radius: 4px;}
 .nav_myself{width: 200px; float: left;}
 .form_table{width: 1050px; float: right;}
 .form-group{line-height: 30px; float: left;}
-.detail_tit{height: 40px; font-size: 20px; color: #222; line-height: 30px; border-bottom: 1px solid #ddd; margin-top: 20px;}
+.detail_tit{ font-size: 20px; color: #222; line-height: 30px; border-bottom: 1px solid #ddd; margin-top: 20px;}
 .content{border-bottom: 1px dotted #ddd; font-size: 16px; line-height: 26px; margin-bottom: 5px; color: #333333; padding:20px; box-sizing: border-box;}
 .time{width: 100%; height: 30px; line-height: 30px; padding: 0 20px; box-sizing: border-box;}
-.news_item{ margin-top: 20px;}
-.news_item .pic{ width: 100%; float: left;}
-.news_item .pic img{width: 100%; height: 100%; float: left;}
+.news_item{ margin-top: 20px; }
+.news_inner{background: #fff;width: 100%;box-sizing: border-box; }
+.news_item .pic{ width: 100%;  display: inline-block;cursor: pointer; overflow: hidden; }
+.news_item .pic:hover img{transform: scale(1.2);}
+.news_item .pic img{width: 100%; height: 100%; float: left; transition: all 1s;}
+.text_tit{box-sizing: border-box;height: 30px; margin: 10px 0; font-size: 18px; padding: 0 10px; line-height: 30px; width: 100%; display: block;}
+.text_3{    height: 72px;
+    color: #5F6367;
+    line-height: 24px;
+
+    font-size: 14px;
+width: 100%;
+    padding: 0 10px;
+    box-sizing: border-box;
+    margin-bottom: 12px;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+.types{ width: 100%; padding: 10px 0 10px 70px ; position: relative; line-height: 30px; border-bottom: 1px dotted #ddd;  }
+.types label{ width: 70px; display: inline-block; height: 30px; line-height: 30px; position: absolute; left:0; top:10px; text-align: center;font-size: 16px; }
+.types a{ height: 30px; padding: 0 16px; line-height: 30px; text-align: center; display: inline-block; margin-bottom: 10px;}
+.types a:hover{text-decoration: none;}
+.types a.active{background: #0d6fb8; color: #fff;}
+.content{ width: 100%;}
+.content img{max-width: 98%;margin-left:1%;}
+.text_overflow{overflow: hidden;white-space: nowrap;text-overflow: ellipsis;}
+.text_time{padding: 0 10px;box-sizing: border-box; height: 20px; width: 100%; line-height: 20px; color: #999;}
+@media screen and (max-width: 750px) {
+    header{background: #f7f7f7;}
+
+    header .nav_list{display: none; width: 100%; cursor: pointer;}
+    header .nav_list li{ margin: 0 0 10px 0; width: 100%; float: left; border: 1px solid #0d6fb8; }
+    header .nav_list li a{ display: block;}
+    .nav_click{display: block}
+}

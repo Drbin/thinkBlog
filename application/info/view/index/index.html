@@ -5,10 +5,11 @@
     <title>主页</title>
     <link href="/thinkBlog/public/css/bootstrap.css" rel="stylesheet">
     <link href="/thinkBlog/public/css/style.css" rel="stylesheet">
-    <link href="/thinkBlog/public/css/font-awesome.css" rel="stylesheet">
+    <link href="/thinkBlog/public/fontAwe/css/font-awesome.min.css" rel="stylesheet">
     <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
     <link rel="icon" href="images/favicon.ico" type="image/x-icon">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
     <style>
         .article_list:hover{text-decoration: none;}
@@ -44,30 +45,58 @@
 
 
 <section class="container" style="margin-top: 20px;">
-    <div class="col-lg-4 col-md-6 col-sm-12">
-        <div class="panel panel-default">
-            <div class="panel-heading">
-                <h3 class="panel-title">
-                    最新发布
-                </h3>
-            </div>
-            <div class="panel-body">
-                <volist id="info" name="info">
-                    <a class="article_list" title="{$info.news_name}" href="/thinkBlog/random/{$info.news_id}">
-                        {$info.news_name}
-                    </a>
-                </volist>
+    <div class="col-lg-8 col-md-12">
+        <div class="col-lg-6 col-md-6 col-sm-12">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title">
+                        最新发布
+                    </h3>
+                </div>
+                <div class="panel-body">
+                    <volist id="info" name="info">
+                        <a class="article_list" title="{$info.news_name}" href="{$info.news_order==1? '/thinkBlog/web/':'/thinkBlog/random/'}{$info.news_id}">
+                            {$info.news_name}
+                        </a>
+                    </volist>
+                </div>
             </div>
         </div>
+        <div class="col-lg-6 col-md-6 col-sm-12">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title">
+                        最新发布
+                    </h3>
+                </div>
+                <div class="panel-body">
 
+                </div>
+            </div>
+        </div>
     </div>
+    <div class="col-lg-4 col-md-12">
+        <div class="col-lg-12 col-md-12 col-sm-12">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title">
+                        常用代码
+                    </h3>
+                </div>
+                <div class="panel-body">
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+
 
 </section>
 
-<script src="/thinkBlog/public/js/jquery.js"></script>
 <script src="/thinkBlog/public/js/bootstrap.min.js"></script>
 <script>
-
+$("#index").addClass("active")
 
 </script>
 
