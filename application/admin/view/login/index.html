@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>教务管理登录</title>
+    <link rel="stylesheet" href="/thinkBlog/public/css/style.css" />
+    <link href="/thinkBlog/public/fontAwe/css/font-awesome.min.css" rel="stylesheet" />
+
+    <style>
+        body{    background-color: #1c77ac;
+            background-image:url("/thinkBlog/public/img/l_blue.png");
+            background-repeat: no-repeat;
+            background-position: center top;
+            overflow: hidden; }
+        h1{ height: 40px; line-height: 40px; width: 100%; border-bottom: 1px solid #1C77AC;}
+        .log_box{background-image:url("/thinkBlog/public/img/l_bg.png") ;  width: 1188px; height: 585px; position: absolute; left: 50%; top: 50px; margin-left: -594px;}
+        .log_inner{ border:7px solid #1C77AC; width: 450px; height: 400px; padding: 50px;box-sizing: border-box; margin:120px auto 0 auto; background: #fff;box-sizing: border-box;}
+        .log_item {width:100%; position: relative; float: left; height: 40px;margin-top: 20px; }
+        .log_item input{border: 1px solid #ddd; outline: none;box-sizing: border-box; width: 100%; height: 100%; padding-left: 50px;}
+        .log_item input:focus{ border: 1px solid #1C77AC}
+        .log_item input:focus+.icon{border-right: 1px solid #1C77AC; color: #1C77AC;}
+        .log_item input:focus+.icon+.pic{border-left: 1px solid #1C77AC}
+        .log_item button{width: 100%; height: 40px; outline: none; border: none; background: #1C77AC;color: #fff; border-radius: 4px;cursor: pointer;}
+        .log_item img{ width: 100%; height: 38px;margin-top: 1px;}
+        .ver{ padding-right: 100px;}
+        .ver .pic{ width: 100px; position: absolute; right: 101px;top:0; height: 100%; border-left: 1px solid #ddd;}
+        .icon{ position:absolute; left:0;top:0;width: 40px; height: 40px;text-align: center; line-height: 40px; font-size: 24px; float: left; border-right: 1px solid #ddd}
+    </style>
+</head>
+
+<body>
+<div class="log_box">
+    <div class="log_inner">
+        <h1>登录</h1>
+        <div class="log_item">
+            <input type="text" placeholder="请输入账户" id="username" />
+            <div class="icon"><i class="fa fa-user"></i> </div>
+        </div>
+        <div class="log_item">
+            <input type="password"  placeholder="请输入密码" id="password" />
+            <div class="icon"><i class="fa fa-lock"></i> </div>
+        </div>
+        <div class="log_item ver">
+            <input type="text" placeholder="请输入验证码" id="iden"  />
+            <div class="icon"><i class="fa fa-image"></i> </div>
+            <div class="pic"><img src="{:captcha_src()}" alt="captcha" /></div>
+        </div>
+        <div class="log_item">
+            <button>登录</button>
+        </div>
+    </div>
+</div>
+<div class="traRotate" id="traRotate" style="display: none;" ><div class="traRotateInner"><i class="fa fa-spinner"></i></div></div>
+
+<script src="/thinkBlog/public/js/jquery.js"></script>
+
+</body>
+</html>

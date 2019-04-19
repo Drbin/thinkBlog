@@ -33,7 +33,7 @@
                 </h3>
             </div>
             <div class="panel-body">
-                <a href="/thinkBlog/addType" class="btn btn-primary">
+                <a href="/thinkBlog/addAdmin" class="btn btn-primary">
                     <i class="fa fa-plus"></i>
                     新增
                 </a>
@@ -49,22 +49,18 @@
                 <table class="table table-bordered table-striped">
                     <thead>
                     <tr>
-                        <th>类别名称</th>
-                        <th>所属栏目</th>
-                        <th>排序序号</th>
-                        <th>类别描述</th>
+                        <th>管理员名</th>
+                        <th>管理员账号</th>
+
                         <th class="text-center">操作</th>
                     </tr>
                     <tbody>
                         <volist name="list" id="list">
                             <tr>
-                                <td>{$list.type_name}</td>
-                                <td>{$list.type_order==1?"web技术":"随写"}</td>
-                                <td>{$list.type_sort}</td>
-                                <td>{$list.type_desc}</td>
+                                <td>{$list.admin_name}</td>
+                                <td>{$list.admin_login_name}</td>
                                 <td class="text-center">
-                                    <a href="/thinkBlog/editType?id={$list.type_id}" class="btn btn-warning btn-xs">修改</a>
-                                    <a href="/thinkBlog/delType?id={$list.type_id}" class="btn btn-danger btn-xs">删除</a>
+                                    <a href="/thinkBlog/delAdmin?id={$list.admin_id}" class="btn btn-danger btn-xs">删除</a>
                                 </td>
                             </tr>
                         </volist>
