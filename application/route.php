@@ -23,7 +23,7 @@ Route::rule(
         'random/:name/:type'=>'info/Index/random',
         'about'=>'info/Index/about',
         'login'=>'admin/Login/index',
-        'Png'=>'admin/Png/index'
+        'Png'=>'admin/Verf/index'
     ]
 );
 
