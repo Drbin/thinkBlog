@@ -17,6 +17,7 @@ class Index extends Controller
         $this->assign("types",'');
         $this->assign("flag",1);
         $type= model("Type")->where('type_order','=',1)->select();
+
         $this->assign("type",$type);
         if (input("name")=="type"){
             $info= model("Text")

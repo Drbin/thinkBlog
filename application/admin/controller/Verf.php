@@ -1,7 +1,7 @@
 <?php
 namespace app\index\controller;
 
-use think\captcha\Captcha;
+
 
 class Verf
 {

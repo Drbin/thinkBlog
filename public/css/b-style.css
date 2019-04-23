@@ -27,12 +27,10 @@ img{border:none;}
 header{ width: 100%; background: #fff; height: 70px; border-bottom: 1px solid #eee;}
 header .logo{ width: 50px; height:50px; display: inline-block; float: left; margin: 10px; }
 header .logo img{ width: 100%; height: 100%;}
-header .nav_list{ height:50px; margin-top:10px; float: right; }
-header .nav_list li{ width: 80px; height: 30px; margin:10px 20px; float: left; line-height: 30px; text-align: center; }
-header .nav_list li a:hover{text-decoration: none;}
-header .nav_list li a{display:inline-block; line-height: 30px; text-align: center; }
-header .nav_list li.active{background: #0d6fb8; }
-header .nav_list li.active a{ color: #fff; }
+header .loginOut{ height:50px; margin-top:10px; float: right; }
+header .loginOut  a:hover{text-decoration: none;}
+header .loginOut a{display:inline-block; line-height: 50px; text-align: center; }
+
 .nav_myself{width: 200px; float: left;}
 .form_table{width: 1050px; float: right;}
 .form-group{line-height: 30px; float: left; width: 100%;}

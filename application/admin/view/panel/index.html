@@ -5,15 +5,11 @@
     <title>文章列表</title>
     <link href="/thinkBlog/public/css/bootstrap.css" rel="stylesheet">
     <link href="/thinkBlog/public/css/b-style.css" rel="stylesheet">
-    <link href="/thinkBlog/public/css/font-awesome.css" rel="stylesheet">
+    <link href="/thinkBlog/public/fontAwe/css/font-awesome.min.css" rel="stylesheet">
 </head>
 <body>
-<header class="header_color">
-    <div class="container">
+<include file="public/header.php" />
 
-
-    </div>
-</header>
 <div class="container">
     <ul class="breadcrumb">
         <li><a href="#">后台管理</a></li>
@@ -68,11 +64,7 @@
                 </div>
                 <div class="panel-body">
                     <table class="table table-bordered table-striped">
-                        <thead>
-                        <tr>
-                            <th>文章名称</th>
 
-                        </tr>
                         <tbody>
                         <volist name="info" id="info">
                             <tr>
@@ -94,7 +86,7 @@
 <script src="/rjkf/public/js/jquery.js"></script>
 <script>
     $(".list-group-item").removeClass("active");
-    $("#adminText").addClass("active")
+    $("#panel").addClass("active")
 </script>
 
 

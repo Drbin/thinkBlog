@@ -5,10 +5,12 @@ use think\Controller;
 use \think\Request;
 
 
-class Type extends Controller
+class Type extends Common
 {
     public function index()
     {
+        $this->isLogin();
+
         $list= model("Type")->order(["type_order","type_sort"],"asc")->paginate(100);
         $page=$list->render();
         $this->assign("list",$list);
@@ -17,6 +19,7 @@ class Type extends Controller
     }
     public function add()
     {
+        $this->isLogin();
         $datetime = date('Y-m-d H:i:s',time());
         $request = Request::instance();
         if(request()->isPost()){
@@ -38,6 +41,7 @@ class Type extends Controller
     }
     public function edit()
     {
+        $this->isLogin();
         $editData=model("Type")->find(input("id"));
         $this->assign("editInfo",$editData);
 

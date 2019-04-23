@@ -5,10 +5,11 @@ use think\Controller;
 use \think\Request;
 
 
-class Admin extends Controller
+class Admin extends Common
 {
     public function index()
     {
+        $this->isLogin();
         $list= model("Admin")->paginate(10);
         $page=$list->render();
         $this->assign("list",$list);
@@ -17,6 +18,7 @@ class Admin extends Controller
     }
     public function add()
     {
+        $this->isLogin();
         $datetime = date('Y-m-d H:i:s',time());
         $request = Request::instance();
         if(request()->isPost()){

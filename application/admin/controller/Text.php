@@ -5,10 +5,11 @@ use think\Controller;
 use \think\Request;
 
 
-class Text extends Controller
+class Text extends Common
 {
     public function index()
     {
+        $this->isLogin();
         $list= model("Text")
             ->field('news_id,news_name,news_desc,news_keywords,news_url,w.type_name')
             ->alias("a")
@@ -25,6 +26,7 @@ class Text extends Controller
     }
     public function add()
     {
+        $this->isLogin();
         $datetime = date('Y-m-d H:i:s',time());
         $request = Request::instance();
         $order= model("Type")->select();
@@ -64,6 +66,7 @@ class Text extends Controller
     }
     public function edit()
     {
+        $this->isLogin();
         $order= model("Type")->select();
         $this->assign("order",$order);
         $editData=model("Text")->find(input("id"));

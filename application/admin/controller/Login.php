@@ -2,7 +2,7 @@
 namespace app\admin\controller;
 
 use think\Controller;
-
+use think\Session;
 class Login extends Controller
 {
     public function index()
@@ -19,7 +19,9 @@ class Login extends Controller
                $this->error("验证码错误");
             }else{
                 if ($result==1){
-                    $this->success("登录成功","/thinkBlog/admin");
+                    Session::set("username",input("post.username"));
+                    Session::set('isLogin',true);
+                    $this->success("登录成功","/thinkBlog/panel");
                 }
             }
 
