@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>文章列表</title>
+    <link href="/thinkBlog/public/css/bootstrap.css" rel="stylesheet">
+    <link href="/thinkBlog/public/css/b-style.css" rel="stylesheet">
+    <link href="/thinkBlog/public/css/font-awesome.css" rel="stylesheet">
+</head>
+<body>
+<header class="header_color">
+    <div class="container">
+
+
+    </div>
+</header>
+<div class="container">
+    <ul class="breadcrumb">
+        <li><a href="#">后台管理</a></li>
+        <li><a href="#">类别管理</a></li>
+        <li class="active">文章列表</li>
+    </ul>
+    <div class="nav_myself">
+        <include file="public/nav_list.html" />
+    </div>
+
+    <div class="form_table">
+
+        <div class=" col-lg-6 col-md-6 col-sm-6">
+            <div class="panel panel-default  ">
+                <div class="panel-heading">
+                    <h3 class="panel-title">
+                        文章统计
+                    </h3>
+                </div>
+                <div class="panel-body">
+                    <table class="table table-bordered table-striped">
+                        <thead>
+                        <tr>
+                            <th>分类序号</th>
+
+                            <th>分类名称</th>
+                            <th>分类数量</th>
+                        </tr>
+                        <tbody>
+                        <volist name="list" key="k" id="list">
+                            <tr>
+
+                                <td>{$k}</td>
+
+                                <td>{$list.type_name}</td>
+                                <td>{$list.count}</td>
+
+                            </tr>
+                        </volist>
+                        </tbody>
+                        </thead>
+                    </table>
+                </div>
+            </div>
+
+        </div>
+        <div class=" col-lg-6 col-md-6 col-sm-6">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title">最新数据
+                    </h3>
+                </div>
+                <div class="panel-body">
+                    <table class="table table-bordered table-striped">
+                        <thead>
+                        <tr>
+                            <th>文章名称</th>
+
+                        </tr>
+                        <tbody>
+                        <volist name="info" id="info">
+                            <tr>
+                                <td>{$info.news_name}</td>
+                            </tr>
+                        </volist>
+                        </tbody>
+                        </thead>
+                    </table>
+
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+<script src="/rjkf/public/js/jquery.js"></script>
+<script>
+    $(".list-group-item").removeClass("active");
+    $("#adminText").addClass("active")
+</script>
+
+
+</body>
+</html>
