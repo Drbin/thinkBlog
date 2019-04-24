@@ -113,7 +113,6 @@
             videoURL = null,
             windowURL = window.URL || window.webkitURL;
         if (files && files[0]) {
-            $(".video_conf").show()
             videoURL = windowURL.createObjectURL(files[0]);
             $("#img").attr("src",videoURL)
         }
