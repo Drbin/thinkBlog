@@ -6,6 +6,8 @@
     <link href="/thinkBlog/public/css/bootstrap.css" rel="stylesheet">
     <link href="/thinkBlog/public/css/b-style.css" rel="stylesheet">
     <link href="/thinkBlog/public/fontAwe/css/font-awesome.min.css" rel="stylesheet">
+    <link href="/thinkBlog/public/layui/css/layui.css" rel="stylesheet">
+
 </head>
 <body>
 <include file="public/header.php" />
@@ -69,7 +71,7 @@
                     </tbody>
                     </thead>
                 </table>
-                <div class="page text-right">
+                <div class="text-center">
                     {$page}
                 </div>
 
@@ -77,12 +79,13 @@
         </div>
     </div>
 </div>
+
 <script src="/rjkf/public/js/jquery.js"></script>
+
 <script>
     $(".list-group-item").removeClass("active");
     $("#adminText").addClass("active")
 </script>
-
 
 </body>
 </html>

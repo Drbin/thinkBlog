@@ -7,6 +7,7 @@ Route::rule(
         'admin'=>'admin/Admin/index',
         'aboutList'=>'admin/About/index',
         'aboutAdd'=>'admin/About/edit',
+        'index'=>'admin/Index/index',
         'addAdmin'=>'admin/Admin/add',
         'delAdmin'=>'admin/Admin/del',
         'type'=>'admin/Type/index',
