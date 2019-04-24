@@ -15,9 +15,18 @@ Date: 2019-04-24 10:00:05
 
 SET FOREIGN_KEY_CHECKS=0;
 
--- ----------------------------
--- Table structure for `admin_tbl`
--- ----------------------------
+DROP TABLE IF EXISTS `about_tbl`;
+CREATE TABLE `about_tbl` (
+  `about_id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `about_name` varchar(100) DEFAULT NULL,
+  `about_words` varchar(200) DEFAULT NULL,
+  `about_content` text DEFAULT NULL,
+  `about_create` datetime DEFAULT NULL,
+  PRIMARY KEY (`about_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
+INSERT INTO `about_tbl` VALUES ('1', '关于', '关于', '<p>关于</p>', '2019-04-23 17:38:46');
+
+
 DROP TABLE IF EXISTS `admin_tbl`;
 CREATE TABLE `admin_tbl` (
   `admin_id` int(10) unsigned NOT NULL AUTO_INCREMENT,

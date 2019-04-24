@@ -85,7 +85,8 @@ class Index extends Controller
     }
 
     public function about(){
-
+        $editData=model("About")->find(1);
+        $this->assign("editData",$editData);
         return $this->fetch("about");
     }
 }

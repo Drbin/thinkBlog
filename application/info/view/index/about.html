@@ -2,11 +2,12 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <title>关于我们</title>
+    <title>{$editData.about_name}</title>
+    <meta name="keywords" content="{$editData.about_name}" />
+    <meta name="description" content="{$editData.about_words}" />
     <link href="/thinkBlog/public/css/bootstrap.css" rel="stylesheet">
     <link href="/thinkBlog/public/css/style.css" rel="stylesheet">
     <link href="/thinkBlog/public/fontAwe/css/font-awesome.min.css" rel="stylesheet">
-
     <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
     <link rel="icon" href="images/favicon.ico" type="image/x-icon">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -18,6 +19,10 @@
 <include file="public/header.html" />
 
 <section class="container">
+    <h1 class="text-center" style="line-height: 40px; font-size: 18px; font-weight: 600;">{$editData.about_name}</h1>
+    <div>
+        {$editData.about_content}
+    </div>
 </section>
 
 <script src="/thinkBlog/public/js/jquery.js"></script>

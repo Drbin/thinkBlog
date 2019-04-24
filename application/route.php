@@ -5,6 +5,8 @@ Route::rule(
     [
         'loginOut'=>'admin/LoginOut/index',
         'admin'=>'admin/Admin/index',
+        'aboutList'=>'admin/About/index',
+        'aboutAdd'=>'admin/About/edit',
         'addAdmin'=>'admin/Admin/add',
         'delAdmin'=>'admin/Admin/del',
         'type'=>'admin/Type/index',
