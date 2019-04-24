@@ -37,11 +37,17 @@ class About extends Common
                 'about_content'=>input("post.content"),
                 'about_create'=>$datetime,
             ];
+
             $result = model("About")->edit($data,$id);
+
             if($result==1){
+
                 $this->success("添加成功","admin/About/index");
+
             }else{
+
                 $this->error($result);
+
             }
         }
         return $this->fetch("edit");
