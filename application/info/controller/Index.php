@@ -8,7 +8,10 @@ class Index extends Controller
 {
     public function index()
     {
-        $info= model("Text")->order("news_order","desc")->limit(10)->select();
+        $info= model("Text")
+            ->order("news_create","desc")
+            ->limit(10)
+            ->select();
         $this->assign("info",$info);
         return $this->fetch();
     }
@@ -24,7 +27,7 @@ class Index extends Controller
                 ->where("news_order","=",1)
                 ->where('news_type','=',input('type'))
                 ->order("news_create","desc")
-                -> paginate(10);
+                -> paginate(6);
             $page=$info->render();
             $this->assign("types",input("type"));
             $this->assign("info",$info);
@@ -37,7 +40,7 @@ class Index extends Controller
             }else{
                 $info= model("Text")
                     ->where("news_order","=",1)
-                    ->order("news_create","desc")->paginate(10);
+                    ->order("news_create","desc")->paginate(6);
                 $page=$info->render();
                 $this->assign("info",$info);
                 $this->assign("page",$page);
@@ -56,7 +59,7 @@ class Index extends Controller
                 ->where("news_order","=",2)
                 ->where('news_type','=',input('type'))
                 ->order(["news_create"],"desc")
-                ->paginate(10);
+                ->paginate(6);
             $page=$info->render();
             $this->assign("types",input("type"));
 
@@ -71,7 +74,7 @@ class Index extends Controller
                 $info= model("Text")
                     ->where("news_order","=",2)
                     ->order(["news_create"],"desc")
-                    ->paginate(10);
+                    ->paginate(6);
                 $page=$info->render();
                 $this->assign("info",$info);
                 $this->assign("page",$page);

@@ -70,7 +70,7 @@ class Text extends Common
         $order= model("Type")->select();
         $this->assign("order",$order);
         $editData=model("Text")->find(input("id"));
-        $this->assign("editInfo",$editData);
+        $this->assign("editData",$editData);
 
         $id= input("id");
         $this->assign("id",$id);
