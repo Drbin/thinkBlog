@@ -16,6 +16,7 @@ class Article extends Common
             $page=0;
         }
 
+
         $list= model("About")->getList($page);
 
 
@@ -23,7 +24,9 @@ class Article extends Common
 
         return $this->fetch();
     }
-
+    public function add(){
+        return $this;
+    }
     public function edit()
     {
         $this->isLogin();
